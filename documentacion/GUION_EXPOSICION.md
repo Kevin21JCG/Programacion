@@ -39,7 +39,7 @@ Explicar qué aceptamos y qué corregimos de una recomendación. Esta entrega se
 Mostrar PLAN_EQUIPO.md. La distribución es propuesta y el segundo nombre está pendiente. Cada integrante implementa y revisa cambios del otro. Fuentes: https://docs.github.com/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects y https://docs.github.com/issues/using-labels-and-milestones-to-track-work/about-milestones
 
 ## 13. Resultados y límites
-Los cinco tests son ejecuciones locales reales, no un pipeline remoto. Antes de entregar se deben completar los registros de GitHub, la participación del compañero y las demostraciones de las herramientas. No inventar porcentajes de mejora.
+Las pruebas y la compilación también se ejecutaron correctamente en GitHub Actions. Mostrar el PR 2 de Kevin21JCG/Programacion y el run 39438736198. Falta la revisión del segundo integrante y las demostraciones personales que correspondan.
 
 ## 14. Propuesta para la empresa
 Defender la elección de SQLite por facilidad de reproducción. El sistema es local sin control de acceso y usa última escritura en edición. La ampliación empresarial requiere diseño adicional.

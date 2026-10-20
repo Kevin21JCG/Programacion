@@ -32,7 +32,7 @@ Modo compilado: detén `npm run dev` con Ctrl+C, ejecuta `npm start` y abre http
 - documentacion: guías de equipo, GitHub, SDD, Copilot y despliegue.
 
 ## Qué está listo y qué requiere tu cuenta
-Código, pruebas, especificaciones y workflows están preparados. Repositorio de esta entrega: https://github.com/Kevin21JCG/Programacion. La implementación se publica en feat/gestion-tareas mediante un Pull Request. La revisión de otro integrante y las demostraciones de Copilot/Spec Kit requieren actividad real en sus cuentas. Consulta documentacion/FLUJO_GITHUB.md. Los archivos no sustituyen esa evidencia.
+Código, pruebas, especificaciones y workflows están preparados. Repositorio: https://github.com/Kevin21JCG/Programacion. Código en feat/gestion-tareas y PR #2 abierto. GitHub Actions completó correctamente la ejecución 39438736198. La revisión del compañero y las demostraciones de Copilot/Spec Kit siguen pendientes. Consulta documentacion/FLUJO_GITHUB.md. Los archivos no sustituyen esa evidencia.
 
 ## Alcance
 Demostración local sin login ni permisos. No uses datos privados ni publiques la API sin agregar autenticación y controles de acceso. SQLite permite reproducir la práctica; una empresa con mucha concurrencia necesitaría evaluar otra arquitectura.

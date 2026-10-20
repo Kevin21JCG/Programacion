@@ -1,7 +1,7 @@
 # Publicar y demostrar el trabajo colaborativo
 
 ## Preparación
-No existe un repositorio remoto creado por este paquete. Las evidencias deben generarse en las cuentas reales. El otro integrante debe revisar el PR desde su propia cuenta. No se debe simular su identidad.
+El repositorio de esta entrega ya está publicado en https://github.com/Kevin21JCG/Programacion, con la implementación en feat/gestion-tareas y el PR #2. Consulta EVIDENCIAS_GITHUB.md para ver los enlaces reales. Los pasos siguientes se conservan como guía para reproducir el proceso en un repositorio nuevo. El otro integrante debe revisar el PR desde su propia cuenta. No se debe simular su identidad.
 1. En GitHub crea un repositorio `devtask-parcial-i` (privado si aún no quieres publicar). Déjalo vacío: sin README ni .gitignore.
 2. Extrae el ZIP y abre la carpeta DevTask en VS Code. Instala Git si `git --version` falla.
 3. Define tu identidad real con `git config --global user.name "Kevin Jahir Coronel Gaona"` y `git config --global user.email "TU_CORREO_DE_GITHUB"`. Sustituye el correo antes de ejecutar.
