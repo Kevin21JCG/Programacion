@@ -1,0 +1,19 @@
+{
+  "name": "devtask-parcial-kevin-coronel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node scripts/desarrollar.js",
+    "start": "node backend/servidor.js",
+    "test": "node --test pruebas/*.test.js",
+    "build": "npm --prefix frontend run build",
+    "instalar": "npm install && npm --prefix frontend install",
+    "verificar": "npm test && npm run build",
+    "demo": "node scripts/demostracion.js",
+    "humo": "node scripts/humo.js"
+  }
+}

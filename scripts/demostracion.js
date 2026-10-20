@@ -1,0 +1,5 @@
+import {crearRepositorio} from '../backend/servicios/TareaServicio.js';
+const r=crearRepositorio('backend/datos/devtask.db');
+try{if(r.listar().length)console.log('La base ya contiene tareas. No se alteraron registros.');else{
+const datos=[['Definir criterios de aceptación','Acordar límites del formulario y respuesta ante errores.','Kevin','Alta','Completada'],['Revisar contrato de la API','Verificar los códigos 201, 400 y 404 con las pruebas.','Integrante 2','Media','En revisión'],['Preparar demostración de persistencia','Crear una tarea, reiniciar el servidor y consultar el registro.','Kevin','Media','En curso'],['Registrar evidencias en GitHub','Capturar PR, revisión, pipeline e historial de ramas.','Integrante 2','Alta','Pendiente'],['Revisar presentación','Relacionar el problema de la empresa con el modelo propuesto.','Kevin','Baja','Pendiente']];
+for(const [titulo,descripcion,responsable,prioridad,estado] of datos)r.crear({titulo,descripcion,responsable,prioridad,estado});console.log('Cinco tareas ficticias de demostración cargadas.');}}finally{r.cerrar();}
