@@ -1,0 +1,34 @@
+name: Despliegue manual al laboratorio
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: laboratorio
+  cancel-in-progress: false
+jobs:
+  desplegar:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, devtask-lab]
+    environment: laboratorio
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm ci --prefix frontend
+      - run: npm test
+      - run: npm run build
+      - name: Construir contenedor
+        run: docker build -t devtask:${{ github.sha }} .
+      - name: Actualizar servicio local
+        shell: bash
+        run: |
+          docker volume create devtask-datos
+          docker rm -f devtask || true
+          docker run -d --name devtask --restart unless-stopped -p 127.0.0.1:3000:3000 -e HOST=0.0.0.0 -e DEVTASK_DB=/datos/devtask.db -v devtask-datos:/datos devtask:${{ github.sha }}
+      - name: Comprobar salud
+        shell: bash
+        run: curl --retry 10 --retry-delay 2 --retry-connrefused --fail http://127.0.0.1:3000/api/salud

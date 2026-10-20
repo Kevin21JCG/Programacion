@@ -1,0 +1,18 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> devtask-parcial-kevin-coronel@1.0.0 test
+> node --test pruebas/*.test.js
+
+✔ RF01 rechaza campos vacíos, tipos y límites incorrectos (5.824699ms)
+✔ RF03 y RF04 edición, eliminación y registros inexistentes (30.337459ms)
+✔ RF05 persistencia real después de cerrar SQLite (20.069213ms)
+✔ RF05 conserva comillas y texto SQL como datos (1.321951ms)
+✔ API HTTP creación, validación, lectura, edición y borrado (283.568838ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 833.358306

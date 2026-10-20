@@ -1,0 +1,22 @@
+name: Tarea del proyecto
+description: Trabajo trazable a un requisito
+title: '[RF] '
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo y requisito
+      description: Qué debe resolver y cuál RF cubre
+    validations:
+      required: true
+  - type: textarea
+    id: aceptacion
+    attributes:
+      label: Criterios de aceptación
+      description: Resultados comprobables
+    validations:
+      required: true
+  - type: textarea
+    id: pruebas
+    attributes:
+      label: Evidencia y pruebas

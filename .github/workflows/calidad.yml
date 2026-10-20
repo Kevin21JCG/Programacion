@@ -1,0 +1,39 @@
+name: Calidad y despliegue de prueba
+on:
+  push:
+    branches: [main, 'feat/**', 'docs/**', 'fix/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            frontend/package-lock.json
+      - run: npm ci
+      - run: npm ci --prefix frontend
+      - name: Pruebas de negocio y API
+        run: npm test
+      - name: Compilación Angular
+        run: npm run build
+      - name: Despliegue temporal y prueba HTTP
+        run: node scripts/humo.js
+      - uses: actions/upload-artifact@v4
+        with:
+          name: devtask-${{ github.sha }}
+          path: |
+            frontend/dist/
+            backend/
+            package.json
+            package-lock.json
+          retention-days: 7
